@@ -1,6 +1,6 @@
 ﻿using System.ServiceModel;
 
-namespace RequestResponse
+namespace ServiceMode
 {
     [ServiceContract]
     public interface IRequestResponse

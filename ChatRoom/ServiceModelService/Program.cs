@@ -4,7 +4,7 @@ using System.Linq;
 using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
-using RequestResponse;
+using ServiceMode;
 
 namespace ServiceModelService
 {
@@ -12,7 +12,8 @@ namespace ServiceModelService
     {
         static void Main(string[] args)
         {
-            using (var host = new ServiceHost(typeof(RequestResponse.RequestResponse),
+            //using (var host = new ServiceHost(typeof(ServiceMode.RequestResponse),
+            using (var host = new ServiceHost(typeof(OneWay),
                 new Uri("net.tcp://localhost:8888/service")))
             {
                 host.Open();

@@ -42,7 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IOneWay.cs" />
     <Compile Include="IRequestResponse.cs" />
+    <Compile Include="OneWay.cs" />
+    <Compile Include="OneWayClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RequestResponse.cs" />
     <Compile Include="RequestResponseClient.cs" />

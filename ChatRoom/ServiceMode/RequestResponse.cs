@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
 
-namespace RequestResponse
+namespace ServiceMode
 {
     public class RequestResponse : IRequestResponse
     {

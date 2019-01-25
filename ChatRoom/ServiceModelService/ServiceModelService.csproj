@@ -50,7 +50,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RequestResponse\ServiceMode.csproj">
+    <ProjectReference Include="..\ServiceMode\ServiceMode.csproj">
       <Project>{5d8c275e-7dd0-45db-adf9-995d427bd1cf}</Project>
       <Name>ServiceMode</Name>
     </ProjectReference>

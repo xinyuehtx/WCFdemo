@@ -1,7 +1,7 @@
 ﻿using System.ServiceModel;
 using System.ServiceModel.Channels;
 
-namespace RequestResponse
+namespace ServiceMode
 {
     public class RequestResponseClient : ClientBase<IRequestResponse>, IRequestResponse
     {
