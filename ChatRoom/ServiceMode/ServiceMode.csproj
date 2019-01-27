@@ -42,6 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Duplex.cs" />
+    <Compile Include="DuplexClient.cs" />
+    <Compile Include="IDuplex.cs" />
     <Compile Include="IOneWay.cs" />
     <Compile Include="IRequestResponse.cs" />
     <Compile Include="OneWay.cs" />

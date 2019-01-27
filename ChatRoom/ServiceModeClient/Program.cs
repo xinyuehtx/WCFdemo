@@ -15,7 +15,12 @@ namespace ServiceModeClient
             Console.WriteLine("启动客户端");
             //var client = new RequestResponseClient(new NetTcpBinding(),
             //    new EndpointAddress(new Uri("net.tcp://localhost:8888/service")));
-            var client = new OneWayClient(new NetTcpBinding(),
+
+            //var client = new OneWayClient(new NetTcpBinding(),
+            //    new EndpointAddress(new Uri("net.tcp://localhost:8888/service")));
+
+            var context = new InstanceContext(new DuplexCallback());
+            var client = new DuplexClient(context, new NetTcpBinding(),
                 new EndpointAddress(new Uri("net.tcp://localhost:8888/service")));
             client.SayHello("Client");
             //var replay = client.SayHello2("Client");

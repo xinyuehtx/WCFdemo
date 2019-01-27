@@ -13,7 +13,8 @@ namespace ServiceModelService
         static void Main(string[] args)
         {
             //using (var host = new ServiceHost(typeof(ServiceMode.RequestResponse),
-            using (var host = new ServiceHost(typeof(OneWay),
+            //using (var host = new ServiceHost(typeof(OneWay),
+            using (var host = new ServiceHost(typeof(Duplex),
                 new Uri("net.tcp://localhost:8888/service")))
             {
                 host.Open();
