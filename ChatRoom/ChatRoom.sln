@@ -36,9 +36,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConcurrencyService", "ConcurrencyService\ConcurrencyService.csproj", "{D6DB53CE-F534-4B64-8A63-159739B872F0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo5", "Demo5", "{9E1F5697-D967-422A-B729-C12B4E1C017D}"
-	ProjectSection(SolutionItems) = preProject
-		ConcurrencyService\Program.cs = ConcurrencyService\Program.cs
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fault", "Fault\Fault.csproj", "{F85166B7-5E22-47E6-9352-DC5A7F3C3962}"
 EndProject

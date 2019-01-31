@@ -22,11 +22,9 @@ namespace FaultClient
                 client.SayHello("Client");
 
             }
-            catch (FaultException<ServiceFault> e)
+            catch (FaultException e)
             {
-                Console.WriteLine($"error method:{e.Detail.Operation}");
-
-                Console.WriteLine($"error detail:{e.Detail.ServiceException}");
+                Console.WriteLine($"error detail:{e}");
             }
 
             Console.Read();

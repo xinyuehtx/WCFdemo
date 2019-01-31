@@ -3,6 +3,7 @@ using System.ServiceModel;
 
 namespace Fault
 {
+    [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerSession)]
     public class Fault : IFault
     {
         public void SayHello(string name)
@@ -14,9 +15,11 @@ namespace Fault
             }
             catch (Exception e)
             {
-                throw new FaultException<ServiceFault>(new ServiceFault(e),"服务端错误");
+                Console.WriteLine(e);
+                Callback.OnError(new ServiceFault(e));
             }
-
         }
+
+        private IFaultCallback Callback => OperationContext.Current.GetCallbackChannel<IFaultCallback>();
     }
 }

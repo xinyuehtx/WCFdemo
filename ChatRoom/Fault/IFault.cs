@@ -2,17 +2,19 @@
 
 namespace Fault
 {
-    [ServiceContract(CallbackContract = typeof(IFaultCallback))]
+    [ServiceContract(CallbackContract = typeof(IFaultCallback),SessionMode = SessionMode.Required)]
     public interface IFault
     {
-        [FaultContract(typeof(ServiceFault))]
         [OperationContract(IsOneWay = true)]
         void SayHello(string name);
     }
 
     public interface IFaultCallback
     {
-        [OperationContract(IsOneWay = false)]
+        [OperationContract(IsOneWay = true)]
         void Replay(string name);
+
+        [OperationContract(IsOneWay = true)]
+        void OnError(ServiceFault fault);
     }
 }

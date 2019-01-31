@@ -9,5 +9,11 @@ namespace Fault
         {
             Console.WriteLine(name);
         }
+
+        public void OnError(ServiceFault fault)
+        {
+            Console.WriteLine($"error method:{fault.Operation}");
+            Console.WriteLine($"error detail:{fault.ServiceException}");
+        }
     }
 }
